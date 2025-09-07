@@ -32,7 +32,7 @@ const Welcome = () => {
         >
           Get Started
         </Button>
-        <Button className={styles.btn} variant="outlined" size="large">
+        <Button className={styles.btn} variant="outlined" size="large"  onClick={() => navigate("/register")}>
           Create account
         </Button>
       </div>

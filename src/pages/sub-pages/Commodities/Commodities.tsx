@@ -151,6 +151,22 @@ const Commodities: React.FC = () => {
         video: { facingMode: "environment" },
       });
 
+
+      const closeBtn = document.createElement("button");
+closeBtn.innerHTML = "&#10006;"; // Unicode for ✖ (X) icon
+Object.assign(closeBtn.style, {
+  position: "absolute",
+  top: "20px",
+  right: "20px",
+  background: "transparent",
+  color: "white",
+  border: "none",
+  fontSize: "28px",
+  cursor: "pointer",
+});
+
+
+
       // Create camera container
       const container = document.createElement("div");
       container.id = "camera-container";
@@ -168,6 +184,13 @@ const Commodities: React.FC = () => {
         zIndex: "9999",
       });
 
+
+      container.appendChild(closeBtn);
+      
+closeBtn.onclick = () => {
+  stream.getTracks().forEach((track) => track.stop()); // stop camera
+  container.remove(); // remove overlay
+};
       // Video element
       const video = document.createElement("video");
       Object.assign(video.style, {

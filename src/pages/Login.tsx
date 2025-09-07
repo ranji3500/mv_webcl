@@ -65,7 +65,12 @@ const Login = () => {
           profileImageRequestPath: "",
           userType: userType,
         });
-        navigate("/home");
+
+        // navigate("/home");
+
+        setTimeout(() => {
+  navigate("/home", { replace: true });
+}, 100);
       }
     } catch (err) {
       console.error(err);
