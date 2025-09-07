@@ -1,0 +1,11 @@
+.formFieldsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.formHeading {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}

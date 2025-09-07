@@ -1,0 +1,17 @@
+.headerBox {
+  margin-bottom: 1.2rem;
+}
+.heading {
+  font-size: 3.2rem;
+  line-height: 1.2;
+}
+.headingHighlighted {
+  color: #fa0100;
+}
+.headingNormal {
+  color: #0e1010;
+}
+.subHeading {
+  color: #394040;
+  font-size: 1.4rem;
+}

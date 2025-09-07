@@ -1,0 +1,55 @@
+.cardContainer {
+  padding: 2rem 0;
+}
+.cardDetailsWrapper {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.commodityImageWrapper {
+  min-width: 10rem;
+  min-height: 10rem;
+}
+.commodityImage {
+  width: 100%;
+}
+
+.commodityInputWrapper {
+  flex-grow: 1;
+}
+.commodityInputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.flexRow {
+  display: flex;
+  gap: 1rem;
+}
+.justifyBetween {
+  justify-content: space-between;
+}
+.alignCenter {
+  align-items: center;
+}
+
+.commodityLabel {
+  font-size: 1.2rem;
+  color: rgb(0, 0, 0, 0.6);
+  line-height: 1.2;
+}
+.commodityPriceText {
+  font-size: 1.6rem;
+  color: #0e1010;
+  white-space: nowrap;
+}
+.commodityDescriptionText {
+  font-size: 1.4rem;
+  color: #394040;
+}
+
+.quantityControl {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}

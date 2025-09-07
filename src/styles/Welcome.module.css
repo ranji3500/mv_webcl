@@ -1,0 +1,24 @@
+.welcomePageContainer {
+  height: 100vh;
+  background: url(/src/assets/pattern-rectangle.png);
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: -10rem;
+  background-color: #fff;
+}
+.imgBlock {
+  gap: 6rem;
+}
+.patternImg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: -1;
+}
+.welcomeText {
+  padding: 4rem;
+}
+.btnBlock {
+  gap: 1.4rem;
+}

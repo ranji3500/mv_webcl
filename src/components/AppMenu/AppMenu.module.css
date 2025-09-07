@@ -1,0 +1,9 @@
+.icon {
+  stroke: #566463;
+  transition: stroke 0.3s ease-in-out;
+}
+
+.iconActive {
+  stroke: #0090d4;
+  stroke-width: 2;
+}

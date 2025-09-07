@@ -1,0 +1,5 @@
+.orderCardContainer {
+  padding: 1.6rem 1.2rem;
+  border: 1px solid var(--cod-gray-100);
+  border-radius: 0.6rem;
+}

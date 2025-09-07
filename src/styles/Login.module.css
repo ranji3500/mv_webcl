@@ -1,0 +1,25 @@
+.loginContainer {
+  height: 100vh;
+}
+.logoBox {
+  margin-bottom: 4rem;
+}
+.loginTextBox {
+  width: 75%;
+}
+.loginMainSection {
+  gap: 2rem;
+}
+.errorMessage {
+  visibility: hidden;
+  height: 10px;
+  color: red;
+}
+
+.errorMessage:empty {
+  visibility: hidden;
+}
+
+.errorMessage:not(:empty) {
+  visibility: visible;
+}

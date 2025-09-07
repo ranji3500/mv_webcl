@@ -1,0 +1,25 @@
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.summaryLabel {
+  font-size: 1.8rem;
+  color: #0e1010;
+}
+.orderTotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  color: #0e1010;
+}
+.orderSummaryList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.dottedDivider {
+  border-top: 2px dotted #ccc;
+}

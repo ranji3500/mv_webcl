@@ -1,0 +1,50 @@
+.orderId {
+  font-size: 1.4rem;
+  color: #394040;
+  margin-bottom: 0.6rem;
+}
+.senderRecieverName {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0e1010;
+  margin-bottom: 0.6rem;
+}
+.date,
+.billBalance {
+  font-size: 1.4rem;
+  color: #394040;
+}
+.orderStatus {
+  font-size: 1.6rem;
+  color: #0e1010;
+  line-height: 1.2;
+}
+.orderDeliveryEstimate {
+  font-size: 1.4rem;
+  color: #414949;
+  line-height: 1.2;
+  padding-left: 1.2rem;
+}
+.billAmount {
+  font-size: 1.6rem;
+  color: #66bb6a;
+}
+.fontBold {
+  font-weight: 700;
+}
+.purpleDot {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: #e338f2;
+  border-radius: 50%;
+  margin-top: 4px;
+  margin-right: 1.2rem;
+}
+.listItemHover {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.listItemHover:hover {
+  background-color: var(--whisper-gray);
+}

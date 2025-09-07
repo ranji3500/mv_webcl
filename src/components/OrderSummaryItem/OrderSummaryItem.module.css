@@ -1,0 +1,11 @@
+.orderItemBox {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+}
+.orderItem {
+  color: #566463;
+}
+.orderItemPrice {
+  color: #0e1010;
+}

@@ -1,0 +1,21 @@
+.container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1.6rem;
+  background-color: #fff;
+}
+.stepperButtonBox {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+.stepperBtn {
+  font-size: 1.6rem;
+  text-transform: none;
+  flex-grow: 1;
+  white-space: nowrap;
+}

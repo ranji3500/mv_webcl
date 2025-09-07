@@ -1,0 +1,12 @@
+.cardContainer {
+  border: 1.2px solid #ccc;
+  border-radius: 0.4rem;
+  padding: 2.6rem;
+  background-color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.selectedCard {
+  background-color: rgba(var(--primary-curious-blue-600-rgb), 0.08);
+  border-color: var(--primary-curious-blue-600);
+}

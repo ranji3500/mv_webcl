@@ -1,0 +1,7 @@
+.headerBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.3rem;
+  background-color: #fff;
+}
