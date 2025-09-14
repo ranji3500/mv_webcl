@@ -12,7 +12,7 @@ const outputDir = process.env.VITE_DIST_PATH || "dist";
 export default defineConfig({
   base: "./",
   plugins: [react(), svgr()],
-  server:{ port: 5000},
+  server:{ port: 5004},
   build: {
     outDir: path.resolve(__dirname, outputDir),
     emptyOutDir: true,
