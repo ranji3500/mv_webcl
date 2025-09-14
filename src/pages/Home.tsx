@@ -67,7 +67,6 @@ const Home = () => {
   const verifyToken = async () => {
     try {
       const res = await axios.get(`${API_BASE_URL}/verify_token`);
-      console.log(res)
       if(res.message!=="Token is valid"){
         navigate('/login')
       }
@@ -76,7 +75,10 @@ const Home = () => {
     } }
     useEffect(() => {
  verifyToken();
-    })
+         setTimeout(() => {
+  navigate("/home", { replace: true });
+}, 100);
+    },[])
   const constructGetOrdersPayload = (
     pageNumber = 1,
     pageSize = DEFAULT_PAGE_SIZE,
@@ -363,7 +365,8 @@ const Home = () => {
         isOpen={isDraftsModalOpen}
         onClose={closeDraftsModal}
       >
-        <CustomModal.Body>
+        {/* <CustomModal.Body>
+          {console.log(draftOrderDetailsDataManagement.data)}
           <List>
             {draftOrderDetailsDataManagement.data.map((draft) => (
               <ListItem
@@ -401,7 +404,57 @@ const Home = () => {
               />
             </div>
           )}
-        </CustomModal.Body>
+        </CustomModal.Body> */}
+
+        <CustomModal.Body>
+  {Array.isArray(draftOrderDetailsDataManagement.data) &&
+  draftOrderDetailsDataManagement.data.length > 0 &&
+  draftOrderDetailsDataManagement.data[0]?.orderId ? (
+    <List>
+      {draftOrderDetailsDataManagement.data.map((draft) => (
+        <ListItem
+          key={draft.orderId}
+          sx={{ justifyContent: "space-between" }}
+          divider
+          className={`d-flex align-items-center cursor-pointer gap-0-8 ${styles.listItemHover}`}
+          onClick={() => handleDraftClick(draft)}
+        >
+          <div className="d-flex flex-column gap-0-4">
+            <p className="fs12 fontMedium codGray900">
+              {formatDateCustom(draft.updatedAt)}
+            </p>
+            <p className="fs16 codGray900">ID: {draft.orderId}</p>
+          </div>
+
+          <IconButton>
+            <ArrowRightIcon />
+          </IconButton>
+        </ListItem>
+      ))}
+    </List>
+  ) : (
+    <div className="text-center py-3">
+      <p className="fs16 codGray600">No draft orders available.</p>
+    </div>
+  )}
+
+  {draftOrderDetailsDataManagement.totalPages >
+    draftOrderDetailsDataManagement.pageSize && (
+    <div className="d-flex justify-content-center mt-1">
+      <Pagination
+        count={draftOrderDetailsDataManagement.totalPages}
+        page={draftOrderDetailsDataManagement.page}
+        onChange={(_, value) =>
+          draftOrderDetailsDataManagement.setPage(value)
+        }
+        color="primary"
+      />
+    </div>
+  )}
+</CustomModal.Body>
+
+
+        
         <CustomModal.Footer>
           <Box display="flex" justifyContent="flex-end" gap={1.6}>
             <CustomButton
