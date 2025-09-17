@@ -76,7 +76,7 @@ const Home = () => {
     useEffect(() => {
  verifyToken();
          setTimeout(() => {
-  navigate("/home", { replace: true });
+  navigate("/home");
 }, 100);
     },[])
   const constructGetOrdersPayload = (
